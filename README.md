@@ -1,9 +1,7 @@
 # UDS Closed-Loop Demo
 
-## 简介
-基于Python的UDS诊断服务闭环测试示例，演示了0x27（安全访问）→ 0x22（读数据）→ 0x2E（写数据）→ 0x19（读DTC）的数据依赖链路。
-
-## 运行
-```bash
-pip install udsoncan
-python main.py
+## 已知问题（仅供学习参考）
+- 0x27密钥强度不足，仅用于演示流程
+- DID动态变化，不符合ISO 14229规范
+- 校验和算法过于简化，需替换为CRC-32
+- DTC掩码溢出，应限制为0xFF
